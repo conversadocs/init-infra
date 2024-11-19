@@ -1,3 +1,9 @@
+## 1.0.0 (2024-11-19)
+
+### Features
+
+* creates initial infra ([#1](https://github.com/conversadocs/init-infra/issues/1)) ([bcf7069](https://github.com/conversadocs/init-infra/commit/bcf70699602b1cca4441658cd489cb8eb08b41b3))
+
 ## [1.1.0](https://github.com/conversadocs/project-template/compare/v1.0.0...v1.1.0) (2024-11-18)
 
 ### Features
