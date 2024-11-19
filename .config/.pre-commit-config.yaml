@@ -13,6 +13,20 @@ repos:
         stages: [commit-msg]
   - repo: local
     hooks:
+      - id: tflint
+        name: terraform linting
+        stages: [commit]
+        entry: make tf-lint
+        language: system
+  - repo: local
+    hooks:
+      - id: terraform-validate
+        name: terraform validation
+        stages: [commit]
+        entry: make tf-validate
+        language: system
+  - repo: local
+    hooks:
       - id: security-scan
         name: Security standards enforcement
         stages: [commit]

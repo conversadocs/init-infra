@@ -1,0 +1,28 @@
+{
+	"AWSTemplateFormatVersion": "2010-09-09",
+	"Resources": {
+		"IAMRole": {
+			"Type": "AWS::IAM::Role",
+			"Properties": {
+				"RoleName": "iam-support-role",
+				"Description": "IAM Support Role",
+				"AssumeRolePolicyDocument": {
+					"Version": "2012-10-17",
+					"Statement": [
+						{
+							"Effect": "Allow",
+							"Principal": {
+								"AWS": "arn:aws:iam::891377050045:user/jason"
+							},
+							"Action": "sts:AssumeRole"
+						}
+					]
+				},
+				"ManagedPolicyArns": [
+					"arn:aws:iam::aws:policy/AWSSupportAccess"
+				],
+				"Path": "/"
+			}
+		}
+	}
+}

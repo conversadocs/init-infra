@@ -1,6 +1,6 @@
-# project-template
+# init-infra
 
-A template for ConversaDocs projects.
+Initial configuration for ConversaDocs managed environment accounts on AWS.
 
 ## Overview
 
