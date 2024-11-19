@@ -1,0 +1,48 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyUnusedServices",
+      "Effect": "Deny",
+      "Action": [
+        "redshift:*",
+        "workspaces:*",
+        "workmail:*",
+        "workdocs:*",
+        "devicefarm:*",
+        "appstream:*",
+        "iot:*",
+        "machinelearning:*",
+        "deeplens:*",
+        "lex:*",
+        "polly:*",
+        "rekognition:*",
+        "translate:*",
+        "snowball:*",
+        "servermigration:*",
+        "datasync:*",
+        "kinesis:*",
+        "kinesisanalytics:*",
+        "glue:*",
+        "athena:*",
+        "emr:*",
+        "cloudhsm:*",
+        "cloudsearch:*",
+        "es:*",
+        "acm:*",
+        "acm-pca:*",
+        "codecommit:*",
+        "codebuild:*",
+        "codedeploy:*",
+        "codepipeline:*",
+        "opsworks:*",
+        "macie:*",
+        "quicksight:*",
+        "greengrass:*",
+        "batch:*",
+        "storagegateway:*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
