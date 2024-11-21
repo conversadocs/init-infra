@@ -41,10 +41,8 @@ jobs:
         with:
           terraform_version: "1.9.8"
 
-      - run: cd terraform/01-prime
-
       - id: terraform-init
-        run: terraform init
+        run: cd terraform/01-prime && terraform init
 
       - id: terraform-plan
-        run: terraform plan -var="github_token=${{  secrets.SEMANTIC_RELEASE_TOKEN }}" -out=.tfplan
+        run: cd terraform/01-prime && terraform plan -var="github_token=${{ secrets.SEMANTIC_RELEASE_TOKEN }}"
