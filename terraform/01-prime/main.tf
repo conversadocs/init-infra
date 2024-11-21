@@ -40,6 +40,35 @@ module "cicd" {
   environment_name = "prime"
 }
 
+resource "aws_organizations_account" "security" {
+  name                       = "Security"
+  email                      = "awssecurity@conversadocs.com"
+  iam_user_access_to_billing = "ALLOW"
+}
+
+################################################################################
+# Billing
+################################################################################
+
+resource "aws_billing_budget" "monthly_budget" {
+  name         = "MonthlyBudget"
+  budget_type  = "COST"
+  limit_amount = "1000"
+  limit_unit   = "USD"
+  time_unit    = "MONTHLY"
+
+  notification {
+    comparison_operator = "GREATER_THAN"
+    threshold           = 90
+    threshold_type      = "PERCENTAGE"
+
+    subscriber {
+      address = "awsbilling@conversadocs.com"
+      type    = "EMAIL"
+    }
+  }
+}
+
 ################################################################################
 # Output
 ################################################################################

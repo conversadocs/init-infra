@@ -1,18 +1,12 @@
 variable "environment_name" {
   description = "The environment name"
   type        = string
-  nullable    = false
+  default     = "prime"
 }
 
 ################################################################################
 # AWS
 ################################################################################
-
-variable "aws_cli_profile" {
-  description = "The AWS CLI profile name"
-  type        = string
-  default     = "default"
-}
 
 variable "aws_region" {
   description = "The AWS region"
