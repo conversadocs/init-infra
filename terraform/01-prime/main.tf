@@ -47,29 +47,6 @@ resource "aws_organizations_account" "security" {
 }
 
 ################################################################################
-# Billing
-################################################################################
-
-resource "aws_billing_budget" "monthly_budget" {
-  name         = "MonthlyBudget"
-  budget_type  = "COST"
-  limit_amount = "1000"
-  limit_unit   = "USD"
-  time_unit    = "MONTHLY"
-
-  notification {
-    comparison_operator = "GREATER_THAN"
-    threshold           = 90
-    threshold_type      = "PERCENTAGE"
-
-    subscriber {
-      address = "awsbilling@conversadocs.com"
-      type    = "EMAIL"
-    }
-  }
-}
-
-################################################################################
 # Output
 ################################################################################
 

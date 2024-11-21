@@ -27,7 +27,6 @@ This is the initial prime AWS account that acts as the control center for all ot
 
 | Name | Type |
 |------|------|
-| [aws_billing_budget.monthly_budget](https://registry.terraform.io/providers/hashicorp/aws/5.76.0/docs/resources/billing_budget) | resource |
 | [aws_organizations_account.dev_account](https://registry.terraform.io/providers/hashicorp/aws/5.76.0/docs/resources/organizations_account) | resource |
 | [aws_organizations_account.security](https://registry.terraform.io/providers/hashicorp/aws/5.76.0/docs/resources/organizations_account) | resource |
 | [aws_organizations_organization.this](https://registry.terraform.io/providers/hashicorp/aws/5.76.0/docs/resources/organizations_organization) | resource |
