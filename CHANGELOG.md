@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/conversadocs/init-infra/compare/v1.0.0...v1.1.0) (2024-11-22)
+
+### Features
+
+* adding account configs ([#5](https://github.com/conversadocs/init-infra/issues/5)) ([a2e0cf9](https://github.com/conversadocs/init-infra/commit/a2e0cf99f2fffce4e1b90581db10595a308fbce1)), closes [#2](https://github.com/conversadocs/init-infra/issues/2)
+
 ## 1.0.0 (2024-11-19)
 
 ### Features
