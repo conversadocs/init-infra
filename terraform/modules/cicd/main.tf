@@ -3,7 +3,7 @@
 ################################################################################
 
 resource "aws_iam_policy" "permissions_boundary" {
-  name        = "cicd-permissions-boundary"
+  name        = "ConversaDocsCicdPermissionsBoundary"
   description = "Permissions boundary for DevOps and CI/CD"
 
   policy = file("${path.module}/permission_boundary.json")
@@ -27,7 +27,7 @@ data "aws_iam_policy_document" "cicd_assume_role_policy" {
 ################################################################################
 
 resource "aws_iam_role" "cicd_role" {
-  name               = "cicd_role"
+  name               = "ConversaDocsCicdRole"
   assume_role_policy = data.aws_iam_policy_document.cicd_assume_role_policy.json
 
   permissions_boundary = aws_iam_policy.permissions_boundary.arn
@@ -43,13 +43,13 @@ resource "aws_iam_role_policy_attachment" "cicd_role_policy_attach" {
 ################################################################################
 
 resource "aws_iam_user" "cicd_user" {
-  name = "cicd_user"
+  name = "conversadocs-cicd-user"
 
   permissions_boundary = aws_iam_policy.permissions_boundary.arn
 }
 
 resource "aws_iam_group" "cicd_group" {
-  name = "cicd_group"
+  name = "ConversaDocsCicdGroup"
 }
 
 resource "aws_iam_user_group_membership" "cicd_user_group_membership" {

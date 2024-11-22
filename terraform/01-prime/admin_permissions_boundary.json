@@ -1,0 +1,44 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "AllowAllActions",
+        "Effect": "Allow",
+        "Action": "*",
+        "Resource": "*"
+      },
+      {
+        "Sid": "DenySensitiveActions",
+        "Effect": "Deny",
+        "Action": [
+          "iam:CreateUser",
+          "iam:DeleteUser",
+          "iam:UpdateUser",
+          "iam:CreateRole",
+          "iam:DeleteRole",
+          "iam:UpdateRole",
+          "iam:CreatePolicy",
+          "iam:DeletePolicy",
+          "iam:AttachUserPolicy",
+          "iam:DetachUserPolicy",
+          "iam:AttachRolePolicy",
+          "iam:DetachRolePolicy",
+          "iam:CreateAccessKey",
+          "iam:DeleteAccessKey",
+          "iam:UpdateAccessKey",
+          "iam:CreateLoginProfile",
+          "iam:DeleteLoginProfile",
+          "iam:UpdateLoginProfile",
+          "iam:CreateAccountAlias",
+          "iam:DeleteAccountAlias",
+          "organizations:CreateOrganization",
+          "organizations:DeleteOrganization",
+          "organizations:LeaveOrganization",
+          "organizations:CreateAccount",
+          "organizations:CloseAccount",
+          "organizations:UpdateOrganization"
+        ],
+        "Resource": "*"
+      }
+    ]
+  }

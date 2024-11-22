@@ -5,6 +5,7 @@ terraform {
     region         = "us-east-1"
     dynamodb_table = "terraform-lock-table"
     encrypt        = true
+    profile        = "cd-prime"
   }
 
   required_version = "1.9.8"
@@ -23,7 +24,8 @@ terraform {
 }
 
 provider "aws" {
-  region = var.aws_region
+  profile = var.aws_cli_profile
+  region  = var.aws_region
 
   default_tags {
     tags = {
