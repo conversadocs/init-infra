@@ -26,3 +26,4 @@ jobs:
           output_format: cli
           output_file_path: console
           file: .config/.checkov.yaml
+

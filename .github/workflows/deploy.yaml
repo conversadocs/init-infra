@@ -1,0 +1,33 @@
+name: Deploy
+on:
+  release:
+    types:
+      - created
+permissions:
+  contents: write
+jobs:
+  plan:
+    name: Terraform Plan and Apply
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.PRIME_AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.PRIME_AWS_SECRET_ACCESS_KEY }}
+    steps:
+      - id: checkout
+        uses: actions/checkout@v3
+
+      - id: setup-terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.9.8"
+
+      - run: cd terraform/01-prime
+
+      - id: terraform-init
+        run: terraform init
+
+      - id: terraform-plan
+        run: terraform plan -var="github_token=${{  secrets.SEMANTIC_RELEASE_TOKEN }}" -out=.tfplan
+
+      - id: terraform-apply
+        run: terraform apply ".tfplan"

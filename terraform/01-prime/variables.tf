@@ -20,6 +20,12 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
+variable "aws_s3_config_bucket_kms_key_arn" {
+  description = "The KMS Key for the config bucket encryption"
+  type        = string
+  nullable    = false
+}
+
 ################################################################################
 # Github
 ################################################################################
