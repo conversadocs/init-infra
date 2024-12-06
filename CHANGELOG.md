@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/conversadocs/init-infra/compare/v1.1.0...v1.1.1) (2024-12-06)
+
+### Bug Fixes
+
+* removing some permissions restrictions on contributor boundary ([#7](https://github.com/conversadocs/init-infra/issues/7)) ([779ff8a](https://github.com/conversadocs/init-infra/commit/779ff8acd9ab86a70d5af7c646969938484b1044)), closes [#6](https://github.com/conversadocs/init-infra/issues/6)
+
 ## [1.1.0](https://github.com/conversadocs/init-infra/compare/v1.0.0...v1.1.0) (2024-11-22)
 
 ### Features
