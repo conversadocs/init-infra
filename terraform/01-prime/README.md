@@ -16,6 +16,7 @@ This is the initial prime AWS account that acts as the control center for all ot
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | 5.76.0 |
+| <a name="provider_github"></a> [github](#provider\_github) | 6.3.1 |
 | <a name="provider_random"></a> [random](#provider\_random) | 3.6.3 |
 
 ## Modules
@@ -54,8 +55,13 @@ This is the initial prime AWS account that acts as the control center for all ot
 | [aws_s3_bucket_ownership_controls.config_bucket](https://registry.terraform.io/providers/hashicorp/aws/5.76.0/docs/resources/s3_bucket_ownership_controls) | resource |
 | [aws_s3_bucket_policy.config_bucket_policy](https://registry.terraform.io/providers/hashicorp/aws/5.76.0/docs/resources/s3_bucket_policy) | resource |
 | [aws_s3_bucket_server_side_encryption_configuration.config_bucket](https://registry.terraform.io/providers/hashicorp/aws/5.76.0/docs/resources/s3_bucket_server_side_encryption_configuration) | resource |
+| [github_team.cloudq](https://registry.terraform.io/providers/integrations/github/6.3.1/docs/resources/team) | resource |
+| [github_team_repository.cloudq_init_infra](https://registry.terraform.io/providers/integrations/github/6.3.1/docs/resources/team_repository) | resource |
+| [github_team_repository.cloudq_landing_zone_infra](https://registry.terraform.io/providers/integrations/github/6.3.1/docs/resources/team_repository) | resource |
 | [random_id.bucket_id](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/id) | resource |
 | [aws_caller_identity._](https://registry.terraform.io/providers/hashicorp/aws/5.76.0/docs/data-sources/caller_identity) | data source |
+| [github_repository.init_infra](https://registry.terraform.io/providers/integrations/github/6.3.1/docs/data-sources/repository) | data source |
+| [github_repository.landing_zone_infra](https://registry.terraform.io/providers/integrations/github/6.3.1/docs/data-sources/repository) | data source |
 
 ## Inputs
 
